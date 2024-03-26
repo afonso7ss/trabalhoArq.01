@@ -3,7 +3,7 @@ package trabalho;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 class EscolaFacade {
     private List<Aluno> alunos;
@@ -47,7 +47,7 @@ class EscolaFacade {
     }
 
     public List<Disciplina> getDisciplinas() {
-        return disciplinas;
+        return this.disciplinas;
     }
 
     public void listarAlunos() {

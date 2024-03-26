@@ -8,17 +8,23 @@ public class Main {
     public static void main(String[] args) {
         EscolaFacade facade = new EscolaFacade();
         Scanner scanner = new Scanner(System.in);
-
+//        Aluno aluno = new Aluno("joao");
+//        aluno.adicionarDisciplina(null);
         List<Disciplina> disciplinas = facade.getDisciplinas();
         System.out.println("Digite o nome das disciplinas disponíveis (digite 'fim' para terminar):");
         String nomeDisciplina;
         while (true ){
            nomeDisciplina = scanner.next();
         	
-        	facade.adicionarDisciplina(nomeDisciplina);
-        	if(nomeDisciplina.equals("fim")) {
-        		break;
+        	
+        	if(!nomeDisciplina.equals("fim")) {
+        		facade.adicionarDisciplina(nomeDisciplina);
         	}
+    		else {
+    			break;
+    		}
+        	
+        	
         }
 
         while (true) {
@@ -26,6 +32,7 @@ public class Main {
             System.out.println("1. Adicionar Aluno");
             System.out.println("2. Remover Aluno");
             System.out.println("3. Listar Alunos");
+            System.out.println("4. Para refazer disciplica do aluno");
             System.out.println("0. Sair");
 
             int opcao = scanner.nextInt();
